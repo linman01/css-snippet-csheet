@@ -22,48 +22,83 @@
         <!-- Main Content - cards-->
         <main>
             <div class="examples">
+
                 <section class="card">
                     <header class="card-header">
-                        <h3>heading</h3>
-                        <p>info</p>
+                        <h3>Flexbox Row</h3>
+                        <p>Use these properties to create a Flexbox row layout.</p>
                     </header>
-                    <code>code</code>
+    <!-- Is there a different way to build this so that it aligns correctly, so the html is not all ugly  -->
+<pre>.row {
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+}</pre>
+                </section>
+
+                <section class="card">
+                    <header class="card-header">
+                        <h3>Flexbox Column</h3>
+                        <p>Use the to create a Flexbox column layout.</p>
+                    </header>
+<pre>.column {
+    display: flex;
+    flex-direction: column;
+}</pre>
+                </section>
+
+                <section class="card">
+                    <header class="card-header">
+                        <h3>Overlay Card with Title</h3>
+                        <p>This will create a background from top to bottom;</p>
+                    </header>
+<pre>.card-header {
+    position: relative;
+    margin-top: 120px;
+}</pre>
+                </section>
+                
+                <section class="card">
+                    <header class="card-header">
+                        <h3>CSS Grid Layout</h3>
+                        <p>Build a 12-column useing CSS Grid.</p>
+                    </header>
+<pre>.row {
+    display: grid;
+    width: 100%; 
+    grid-template-columns: 
+repeat(12, 1fr);
+}</pre>
+                </section>
+
+                <section class="card">
+                    <header class="card-header">
+                        <h3>Box Transition Glow</h3>
+                        <p>Use transition and box shawdows to glow on hover.</p>
+                    </header>
+<pre>.code-card .card-header {
+    border-radius: 8px;
+    transition: all 0.5s ease-in-
+out;
+}
+
+    needs commpleted
+</pre>
+    
                 </section>
                 <section class="card">
                     <header class="card-header">
-                        <h3>heading</h3>
-                        <p>info</p>
+                        <h3>Linear Gradients</h3>
+                        <p>Creates a linear gradient bg from top to bottom.</p>
                     </header>
-                    <code>code</code>
+<pre>.linear-gradient {
+   background-image: linear-
+gradient(
+    rgba(102, 236, 0.3) 0%,
+    rgba(232, 102, 0.6) 100%
+)</pre>
                 </section>
-                <section class="card">
-                    <header class="card-header">
-                        <h3>heading</h3>
-                        <p>info</p>
-                    </header>
-                    <code>code</code>
-                </section>
-                <section class="card">
-                    <header class="card-header">
-                        <h3>heading</h3>
-                        <p>info</p>
-                    </header>
-                    <code>code</code>
-                </section>
-                <section class="card">
-                    <header class="card-header">
-                        <h3>heading</h3>
-                        <p>info</p>
-                    </header>
-                    <code>code</code>
-                </section>
-                <section class="card">
-                    <header class="card-header">
-                        <h3>heading</h3>
-                        <p>info</p>
-                    </header>
-                    <code>code</code>
-                </section>
+
             </div>
         </main>
 

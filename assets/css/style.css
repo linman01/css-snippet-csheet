@@ -3,9 +3,12 @@
 :root {
     --white: #fff;
     --black: #000;
-    --dark-purple: #231134; 
+    --dark-purple: #231134;
     --plum: #dda0dd;
+    --sm-border-radius: 10px;
+    --card-padding: 2px;
 }
+
 
 body {
     background-color: var(--dark-purple);
@@ -25,12 +28,12 @@ h2,
 h3 {
     color: var(--plum);
     font-family: 'Noto Serif NP Hmong',
-        serif;  
+        serif;
 }
 
 h1 {
     font-size: 2.5rem;
-    margin-bottom: 2rem;  
+    margin-bottom: 2rem;
 }
 
 h2 {
@@ -49,7 +52,7 @@ header {
     padding: 3rem 3rem 1.5rem 3rem;
 }
 
-header  > p {
+header>p {
     text-align: center;
 }
 
@@ -80,24 +83,46 @@ footer {
 /* Card Styles */
 .card-header {
     padding: 8px;
+    border: 1px solid --plum
 }
 
+.card-header p {
+    padding: var(--card-padding);
+    text-align: start;
+}
+
+/* Still need to make cards adjust for content to remain same size */
 .card {
-    border: 1px solid var(--white);
-    padding: 10px;
+    padding: 1.3rem;
     flex: 0 0 300px;
     margin: 20px;
+    border: 1px solid var(--plum);
+    border-radius: var(--sm-border-radius);
+    height: 20rem;
+    transition: all 0.5 ease-in-out;
 }
 
-/* Code Sections Styles */
-code {
-    background-color: var(--white);
-    color: var(--black);
-    font-family: 'Courier Prime',
-        monospace;
-    line-height: 1.5;
-    display: block;
-    width: 100%;
-    min-height: 10rem;
-    max-height: 25rem;    
+.card:hover {
+    box-shadow: inset 0px 0px 8px var(--dark-purple), 0px 0px 15px var(--plum);
 }
+
+.card h3 {
+    border: 1px solid var(--plum);
+    padding: var(--card-padding);
+    border-radius: var(--sm-border-radius);
+
+}
+
+
+/* Code Sections Styles */
+.card pre {
+    background: linear-gradient(30deg, var(--plum), var(--white));
+    color: var(--black);
+    padding: 1rem; 
+    width: 100%;
+    height: 10.5rem;
+    border-radius: var(--sm-border-radius);
+    line-height: 1.4rem;
+    user-select: all;    
+}
+
