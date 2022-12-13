@@ -1,59 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Noto+Sans+JP&family=Noto+Serif+NP+Hmong:wght@400;500;600;700&display=swap');
+
 :root {
     --white: #fff;
     --black: #000;
-    --dark-purple: #231134;
+    --dark-purple: #231134; 
     --plum: #dda0dd;
 }
 
 body {
     background-color: var(--dark-purple);
     color: var(--white);
+    font-family: 'Noto Sans JP',
+        sans-serif;
+    font-size: 16px;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    padding: 3% 0;
-
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100vh;
 }
 
+/* Headings */
 h1,
-h2 {
+h2,
+h3 {
     color: var(--plum);
-    padding: 2% 0;
+    font-family: 'Noto Serif NP Hmong',
+        serif;  
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;  
 }
 
 h2 {
-    font-size: 1.5em;
+    font-size: 1.5rem;
+    margin-bottom: 1.7rem;
 }
 
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+}
+
+/* Main Header */
 header {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    width: 75%;
-    margin-bottom: 5%;
+    text-align: center;
+    padding: 3rem 3rem 1.5rem 3rem;
 }
 
-header p {
+header  > p {
     text-align: center;
 }
 
 main {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-
 }
 
-section {
-    display: block;
+footer {
+    bottom: 0;
+    padding: 20px;
     text-align: center;
+    background: var(--dark-blue);
+    color: var(--white);
+    margin-top: auto;
+    width: 100%;
+}
+
+.examples {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 50px;
+}
+
+/* Card Styles */
+.card-header {
+    padding: 8px;
 }
 
 .card {
-    width: 500px;
-    height: 300px;
+    border: 1px solid var(--white);
+    padding: 10px;
+    flex: 0 0 300px;
+    margin: 20px;
+}
+
+/* Code Sections Styles */
+code {
+    background-color: var(--white);
+    color: var(--black);
+    font-family: 'Courier Prime',
+        monospace;
+    line-height: 1.5;
+    display: block;
+    width: 100%;
+    min-height: 10rem;
+    max-height: 25rem;    
 }
